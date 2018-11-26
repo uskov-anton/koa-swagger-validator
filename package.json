@@ -1,0 +1,34 @@
+{
+  "name": "koa-swagger-validator",
+  "version": "0.0.0",
+  "description": "Koa 2 middleware for validating requests/responses via swagger-tools",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uskov-anton/koa-swagger-validator.git"
+  },
+  "keywords": [
+    "koa",
+    "koa2",
+    "koajs",
+    "koa-connect",
+    "koa-compose",
+    "swagger",
+    "swagger2",
+    "swagger-tools",
+    "swagger-validator",
+    "middleware",
+    "validation",
+    "validator"
+  ],
+  "author": {
+    "name": "Uskov Anton",
+    "email": "uskov.anton@gmail.com",
+    "url": "https://github.com/uskov-anton"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uskov-anton/koa-swagger-validator/issues"
+  },
+  "homepage": "https://github.com/uskov-anton/koa-swagger-validator#readme"
+}
