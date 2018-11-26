@@ -30,5 +30,10 @@
   "bugs": {
     "url": "https://github.com/uskov-anton/koa-swagger-validator/issues"
   },
-  "homepage": "https://github.com/uskov-anton/koa-swagger-validator#readme"
+  "homepage": "https://github.com/uskov-anton/koa-swagger-validator#readme",
+  "dependencies": {
+    "koa-compose": "^4.1.0",
+    "koa-connect": "^2.0.1",
+    "swagger-tools": "^0.10.4"
+  }
 }
