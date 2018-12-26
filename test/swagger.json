@@ -1,0 +1,415 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.0",
+    "title": "Swagger test spec"
+  },
+  "host": "localhost:3456",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/test/{path}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          }
+        }
+      }
+    },
+    "/test/query/string": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/query_string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          }
+        }
+      }
+    },
+    "/test/query/string/required": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/query_string_req"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/query/array": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/query_array"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/object": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/object/required": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_object_req"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/properties/string": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_properties_string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/properties/string/required": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_properties_string_req"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/properties/enum": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_properties_enum"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
+    "/test/body/properties/enum/required": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_properties_enum_required"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "Request validation failed: Parameter (str) is required"
+        }
+      }
+    }
+  },
+  "responses": {
+    "Success": {
+      "description": "Ok",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "Success"
+          }
+        }
+      }
+    },
+    "BadRequest": {
+      "description": "Bad Request",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/definitions/Error"
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "path": {
+      "in": "path",
+      "name": "path",
+      "required": true,
+      "type": "string"
+    },
+    "query_string": {
+      "in": "query",
+      "name": "str",
+      "required": false,
+      "type": "string"
+    },
+    "query_string_req": {
+      "in": "query",
+      "name": "str",
+      "required": true,
+      "type": "string"
+    },
+    "query_array": {
+      "in": "query",
+      "name": "arr",
+      "required": true,
+      "type": "array",
+      "collectionFormat": "multi",
+      "items": {
+        "type": "string"
+      }
+    },
+    "body_object": {
+      "in": "body",
+      "name": "data",
+      "required": false,
+      "schema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "body_object_req": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    "body_properties_string": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "str": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "body_properties_string_req": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "required": [
+          "str"
+        ],
+        "properties": {
+          "str": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "body_properties_enum": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "enum": {
+            "type": "string",
+            "enum": [
+              "fst",
+              "sec",
+              "thrd"
+            ]
+          }
+        }
+      }
+    },
+    "body_properties_enum_required": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "required": [
+          "enum"
+        ],
+        "properties": {
+          "enum": {
+            "type": "string",
+            "enum": [
+              "fst",
+              "sec",
+              "thrd"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

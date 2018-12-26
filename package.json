@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "description": "Koa 2 middleware for validating requests/responses via swagger-tools",
   "main": "index.js",
-  "engines" : {
-    "node" : ">=8.0.0"
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -38,5 +41,9 @@
     "koa-compose": "^4.1.0",
     "koa-connect": "^2.0.1",
     "swagger-tools": "^0.10.4"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "koa": "^2.6.2"
   }
 }
