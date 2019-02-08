@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/uskov-anton/koa-swagger-validator#readme",
   "dependencies": {
+    "koa-body": "^4.0.7",
     "koa-compose": "^4.1.0",
     "koa-connect": "^2.0.1",
     "swagger-tools": "^0.10.4"

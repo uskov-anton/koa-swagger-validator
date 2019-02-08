@@ -17,6 +17,7 @@ const request = (opt, data) => new Promise((resolve, reject) => {
     const request = http.request({
         hostname: "localhost",
         port: 3456,
+        headers,
         ...opt
     }, response => {
         const { statusCode, statusMessage } = response;
