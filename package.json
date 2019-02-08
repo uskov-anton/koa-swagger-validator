@@ -1,6 +1,6 @@
 {
   "name": "koa-swagger-validator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Koa 2 middleware for validating requests/responses via swagger-tools",
   "main": "index.js",
   "engines": {
