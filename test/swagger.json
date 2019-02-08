@@ -206,6 +206,32 @@
         }
       }
     },
+    "/test/body/properties/string/required/not_empty": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/body_properties_string_req_not_empty"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/responses/Success"
+            }
+          },
+          "400": {
+            "description": "Validation error",
+            "schema": {
+              "$ref": "#/responses/BadRequest"
+            }
+          }
+        }
+      }
+    },
     "/test/body/properties/enum": {
       "post": {
         "produces": [
@@ -368,6 +394,23 @@
         "properties": {
           "str": {
             "type": "string"
+          }
+        }
+      }
+    },
+    "body_properties_string_req_not_empty": {
+      "in": "body",
+      "name": "data",
+      "required": true,
+      "schema": {
+        "type": "object",
+        "required": [
+          "str"
+        ],
+        "properties": {
+          "str": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }
