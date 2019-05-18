@@ -2,6 +2,18 @@
 
 > Koa 2 + Swagger 2 + Swagger-tools
 
+## Install
+
+```bash
+$ npm install koa-swagger-validator --save
+```
+
+or
+
+```bash
+$ yarn add koa-swagger-validator
+```
+
 ## Usage
 
 ### `validator(spec) => koa2 middleware`
