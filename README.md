@@ -55,7 +55,6 @@ import spec from "./swagger.json";
 
 |Properties|Type|Required|
 |----------|----|--------|
-|[bodyParser](https://github.com/dlau/koa-body)|function (middleware)|no|
 |[security](https://github.com/apigee-127/swagger-tools/blob/master/docs/Middleware.md#swagger-security)|object|no|
 |[validator](https://github.com/apigee-127/swagger-tools/blob/master/docs/Middleware.md#swagger-validator)|object|no|
 |[router](https://github.com/apigee-127/swagger-tools/blob/master/docs/Middleware.md#swagger-router)|object|no|
@@ -69,7 +68,6 @@ import spec from "./swagger.json";
 
 ## Credits
 
-- [koa-body](https://github.com/dlau/koa-body)
 - [koa-connect](https://github.com/vkurchatkin/koa-connect)
 - [koa-compose](https://github.com/koajs/compose)
 - [swagger-tools](https://github.com/apigee-127/swagger-tools)

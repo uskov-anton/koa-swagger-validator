@@ -1,5 +1,4 @@
 const { initializeMiddleware } = require("swagger-tools");
-const body = require("koa-body");
 const connect = require("koa-connect");
 const compose = require("koa-compose");
 
@@ -32,10 +31,4 @@ const koaSwaggerValidator = async (spec, {
     })
 );
 
-module.exports = async (spec, { bodyParser, ...opt } = {}) => {
-    const validator = await koaSwaggerValidator(spec, opt);
-    return compose([
-        bodyParser || body(),
-        validator
-    ]);
-};
+module.exports = koaSwaggerValidator;
